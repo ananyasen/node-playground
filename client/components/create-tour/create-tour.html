@@ -1,0 +1,74 @@
+<div>
+  <div ng-include="'components/secondary-navbar/secondary-navbar.html'"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="create-tour-progress">
+        <div ng-repeat="step in steps" class="create-tour-progress-step" >
+            <div ng-class="{selected: step.isCurrent}">
+              <i class="{{step.icon}}"></i>
+              <span >{{step.title}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <i ng-show="step.hasNext" class="fa fa-caret-right"></i>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container tour-create">
+      <div class="row">
+        <div class="col-md-5">
+          <div>
+            <h4 class="tour-name" contenteditable="true">Tour Name</h4> <i class="fa fa-pencil"></i>
+          </div>
+          <small class="text-muted">Tour Name for you to remember. Ex: Delhi in a Day </small>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <span>- on a &nbsp;&nbsp;</span>
+            <!-- Select tour category -->
+            <div class="btn-group" uib-dropdown is-open="status.isopen">
+              <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">
+                <span class="theme-text">{{theme}} </span><span class="caret"></span>
+              </button>
+              <ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button">
+                <li role="menuitem" ng-repeat="(cat, item) in categories">
+                    <div class="theme-choices">
+                      <div ng-click="selectTheme($event)" class="clickable theme-text" data-key="{{item.key}}">{{item.title}}</div>
+                      <small class="text-muted"><span>{{item.likes}}</span>&nbsp;<i class="fa fa-heart"></i></small>
+                      <small class="pull-right text-muted"><span>{{item.guides}}</span>&nbsp;<i class="fa fa-user"></i></small>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <!-- end - Select tour category -->
+          </div>
+          <small class="text-muted">Our guides specialize in different themes. Like Historic, Religious, etc</small>
+        </div>
+      </div>
+      <div class="row spacer20"></div>
+
+      <!-- Select destinations -->
+      <div class="row">
+        <h4 class="tour-locations">Destination</h4>
+        <small class="text-muted">You can add multiple destinations</small>
+
+        <div>
+          <input required placeholder="Search.. Ex: Places in India" type="text" class="form-control"
+                 name="destination" ng-model="input.destination"
+                 uib-typeahead="address for address in searchForPlaces($viewValue) | limitTo:20"
+                 typeahead-min-length="3" typeahead-loading="typeAheadLoading"
+                 typeahead-no-results="noResults" class="form-control">
+
+          <!--<input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" -->
+                 <!--uib-typeahead="address for address in getLocation($viewValue)" -->
+                 <!--typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">-->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

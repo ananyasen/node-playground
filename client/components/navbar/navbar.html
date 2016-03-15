@@ -1,0 +1,71 @@
+<div ng-controller="NavbarCtrl">
+  <nav class="navbar navbar-default main-nav-top" role="navigation">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="http://www.guidedgateway.com/Why_GuidedGateway.html" target="_blank">Guide Signup</a>
+      </li>
+      <li>
+        <a href="tel: +1 510 938 2562"><i class="fa fa-phone"></i>  +1 510 938 2562</a>
+      </li>
+      <li>
+        <a href="mailto: support@guidedgateway.com"><i class="fa fa-envelope-o"></i>  support@guidedgateway.com</a>
+      </li>
+      <li>
+        <a>
+          <i class="fa fa-share"></i>
+          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-pinterest-p"></i>
+          ...
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="navbar navbar-default  main-nav" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand"><img src="http://www.guidedgateway.com/img/logo.png" /></a>
+      </div>
+
+      <div collapse="isCollapsed" class="uib-collapse navbar-collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="item in menu" ng-class="{selected: isActive(item.link)}">
+              <a ng-href="{{item.link}}">{{item.title}}</a>
+          </li>
+        </ul>
+
+        <!-- Search box-->
+        <form class="navbar-form navbar-left site-search" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <i class="fa fa-search" style="font-size: 1.2em;color:#DCC5C5;vertical-align:sub;"></i>
+          </div>
+        </form>
+
+        <div class="navbar-right cart">
+          <i class="fa fa-shopping-cart"></i>
+          <strong>Cart</strong>
+        </div>
+
+        <div class="navbar-right signin">
+            <span>Hello. Sign In</span><br />
+            <strong>My Account <i class="fa fa-caret-down"></i></strong>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+  </nav>
+
+</div>

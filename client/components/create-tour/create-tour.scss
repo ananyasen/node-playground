@@ -1,0 +1,44 @@
+.tour-create{
+  .tour-name, .tour-classification{
+    display: inline-block;
+  }
+
+  .tour-name .fa-pencil{
+    padding-left: 10px;
+  }
+}
+
+.create-tour-progress{
+  min-width: 500px;
+  margin:10px;
+
+  .create-tour-progress-step{
+    display: inline-block;
+    border-radius:8px;
+    border:solid 1px #bbd49f;
+    cursor: pointer;
+    margin:8px;
+  }
+
+  .create-tour-progress-step div{
+    padding: 10px;
+  }
+
+  .create-tour-progress-step .selected{
+    background-color: #c2d4ae;
+
+    span{
+      text-decoration: underline;
+    }
+  }
+
+  .theme-text{
+    font-family: cursive;
+    font-size: 20px;
+  }
+
+  .theme-choices{
+    padding:5px;
+  }
+}
+

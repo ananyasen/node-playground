@@ -1,0 +1,74 @@
+.thing-form {
+    margin: 20px 0;
+}
+
+#banner {
+    border-bottom: none;
+    margin-top: -20px;
+}
+
+#banner h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.hero-unit {
+    position: relative;
+    padding: 30px 15px;
+    color: #F5F5F5;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background: #4393B9;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    /*margin-top: 70px;*/
+    border-top: 1px solid #E5E5E5;
+    background-color: #56433B;
+    color:#ddd;
+    font-size:12px;
+    box-shadow: -2px -2px 7px #C7B8B8;
+
+    .contact{
+      text-align: left;
+    }
+    .contact li{
+      background-color: #56433B;
+      border:none;
+      padding: 5px 0px;
+    }
+}
+
+.main-content{
+  background-image: url("../../../assets/images/builder-bg.png");
+  padding-bottom: 70px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width:100%;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+.clickable:hover {
+  cursor:pointer;
+  text-decoration: none;
+  opacity:.8;
+}
+
+.spacer10{
+  height:10px;
+}
+.spacer20{
+  height:20px;
+}
+.spacer30{
+  height:30px;
+}
+
